@@ -8,5 +8,8 @@
             "email": "pbreteche@dawan.fr"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-mbstring": "*",
+        "ext-json": "*"
+    }
 }

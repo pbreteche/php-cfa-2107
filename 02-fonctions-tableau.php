@@ -108,3 +108,22 @@ $fruits = ['cerise', 'pomme', 'citron'];
 $couleurs = ['rouge', 'vert', 'jaune'];
 
 print_r(array_combine($fruits, $couleurs));
+
+$contacts = [
+    ['nom' => 'Wayne', 'prenom' => 'Bruce'],
+    ['nom' => 'Bernard', 'prenom' => 'Edwige'],
+    ['nom' => 'Leperse', 'prenom' => 'Julien'],
+    ['nom' => 'Wayne', 'prenom' => 'Thomas'],
+    ['nom' => 'Doe', 'prenom' => 'John'],
+];
+
+usort($contacts, function($c1, $c2) {
+    $comparaison = $c1['nom'] <=> $c2['nom'];
+    if (0 !== $comparaison) {
+        return $comparaison;
+    }
+
+    return $c1['prenom'] <=> $c2['prenom'];
+});
+
+print_r($contacts);

@@ -10,6 +10,8 @@
     ],
     "require": {
         "ext-mbstring": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-calendar": "*",
+        "ext-intl": "*"
     }
 }

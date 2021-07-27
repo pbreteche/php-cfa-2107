@@ -63,3 +63,28 @@ $titre = $formation->getTitre();
 $debut = $formation->getDebut();
 
 echo DateTimeInterface::W3C."\n";
+
+$paques = easter_date(2021);
+
+$dateIntervalObject = $lundiPrecedent->diff($mardiPrecedent);
+echo $dateIntervalObject->format('%a')."\n";
+
+$premiersDuMois = new DatePeriod(
+    new DateTime('2021-01-01'),
+    new DateInterval('P1M'),
+    new DateTime('2022-01-01')
+);
+
+foreach ($premiersDuMois as $current) {
+    echo $current->format('Y-m-d')."\n";
+}
+
+// Exemple avec l'extension Intl
+$fmt = new IntlDateFormatter(
+    'fr',
+    IntlDateFormatter::LONG,
+    IntlDateFormatter::LONG,
+    'Europe/Berlin',
+    IntlDateFormatter::GREGORIAN
+);
+echo 'La date du jour formatée en français ' . $fmt->format($lundiPrecedent)."\n";

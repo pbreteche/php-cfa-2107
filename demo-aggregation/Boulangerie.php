@@ -1,5 +1,8 @@
 <?php
 
+require_once 'Commerce.php';
+require_once 'Meunier.php';
+
 class Boulangerie extends Commerce
 {
 
@@ -18,7 +21,7 @@ class Boulangerie extends Commerce
 
     public function faireUnPain()
     {
-        $this->getHoraireOuverture();
         $this->meunier->fournirFarine();
+        $this->getHoraireOuverture();
     }
 }

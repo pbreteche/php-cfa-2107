@@ -11,6 +11,6 @@ class Commerce
 
     public function getHoraireOuverture()
     {
-        return $this->ouverture;
+        echo $this->ouverture->format('d/m/Y');
     }
 }

@@ -51,3 +51,12 @@ echo 'defaut';
  * métaphore: contrat/engagement
  * Question comment ça s'utilise et non comment ça marche
  */
+
+/**
+ * 2 mots clé pour faire un appel static
+ *
+ * self:: appel la méthode la classe courante de l'implémentation
+ *      (dans laquelle on est en train d'écrire)
+ * static:: appel la méthode de la classe d'origin de l'appel
+ *      (déterminé au moment de l'exécution)
+ */

@@ -12,6 +12,7 @@
         "ext-mbstring": "*",
         "ext-json": "*",
         "ext-calendar": "*",
-        "ext-intl": "*"
+        "ext-intl": "*",
+        "ext-pdo": "*"
     }
 }

@@ -127,3 +127,7 @@ usort($contacts, function($c1, $c2) {
 });
 
 print_r($contacts);
+
+// 1 <=> 2 // 1 = déjà dans l'ordre
+// 1 <=> 1 // 0 = égalité
+// 2 <=> 1 // -1 = dans l'ordre inverse

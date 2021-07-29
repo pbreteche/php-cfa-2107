@@ -30,3 +30,8 @@ if ($instance instanceof MaClasse) {
 }
 
 
+function demoParametres(object $monParam) {
+    echo 'ça marche'."\n";
+}
+
+demoParametres(new \stdClass());

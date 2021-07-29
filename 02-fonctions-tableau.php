@@ -131,3 +131,32 @@ print_r($contacts);
 // 1 <=> 2 // 1 = déjà dans l'ordre
 // 1 <=> 1 // 0 = égalité
 // 2 <=> 1 // -1 = dans l'ordre inverse
+
+// accès à la clé nom du troisième (index 2) sous-tabeau
+echo $contacts[2]['nom']."\n";
+
+foreach ($contacts as $i => $contact) {
+    foreach($contact as $field => $value) {
+        echo $i.' '.$field.' : '.$value."\n";
+    }
+}
+
+$tableau = [
+    'first' => function() {
+        return 'Hello';
+    },
+    'second' => function() {
+        return 'world';
+    },
+];
+
+echo $tableau['first']().' '.$tableau['second']()."\n";
+
+
+$tableau = ['foo', 'bar', 'far', 'boo'];
+
+function inverseExtremite($tab) {
+    $premier = $tab[0];
+    $tab[0] = array_pop($tab);
+    $tab[] = $premier;
+}
